@@ -613,4 +613,23 @@ describe('styled', () => {
       () => styled(undefined)`display: flex;`
     ).toThrowErrorMatchingSnapshot()
   })
+
+  test('withComponent will replace tags but keep classes', () => {
+    const HeadingH1 = styled.h1`color: green;`
+    const HeadingH2 = styled.h2`color: red;`
+    const HeadingH3 = HeadingH1.withTag('h3')
+    const HeadingH4 = HeadingH1.withTag('h4').withTag(HeadingH2)
+
+    const tree = renderer
+      .create(
+        <section>
+          <HeadingH1>hello world</HeadingH1>
+          <HeadingH2>hello world</HeadingH2>
+          <HeadingH3>hello world</HeadingH3>
+          <HeadingH4>hello world</HeadingH4>
+        </section>
+      ).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
 })

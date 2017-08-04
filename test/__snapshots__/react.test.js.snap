@@ -164,7 +164,7 @@ exports[`styled component as selector 1`] = `
 <div
   className="glamor-2 glamor-3"
 >
-  hello 
+  hello
   <h1
     className="glamor-0 glamor-1"
   >
@@ -192,7 +192,7 @@ exports[`styled component as selector function interpolation 1`] = `
 <div
   className="glamor-2 glamor-3"
 >
-  hello 
+  hello
   <h1
     className="glamor-0 glamor-1"
   >
@@ -425,7 +425,7 @@ exports[`styled nested 1`] = `
 <div
   className="glamor-2 glamor-3"
 >
-  hello 
+  hello
   <h1
     className="glamor-0 glamor-1"
   >
@@ -610,4 +610,59 @@ exports[`styled themes 1`] = `
 exports[`styled throws if undefined is passed as the component 1`] = `
 "You are trying to create a styled element with an undefined component.
 You may have forgotten to import it."
+`;
+
+exports[`styled withComponent allows replacement of tag 1`] = `
+<section>
+  <h1
+    className="css-9r6rk41 css-45352"
+  >
+    hello
+  </h1>
+  <h2
+    className="css-9r6rk41 css-45352"
+  >
+    world
+  </h2>
+</section>
+`;
+
+exports[`styled withComponent will replace tags but keep classes 1`] = `
+<section>
+  <h1
+    className="css-1bev6bb41 css-45352"
+  >
+    hello
+  </h1>
+  <h2
+    className="css-1bev6bb41 css-45352"
+  >
+    world
+  </h2>
+</section>
+`;
+
+exports[`styled withTag will replace tags but keep classes 1`] = `
+<section>
+  <h1
+    className="css-prwino41 css-45352"
+  >
+    hello world
+  </h1>
+  <h2
+    className="css-prwino42 css-1gao8uk"
+  >
+    hello world
+  </h2>
+  <h3
+    className="css-prwino41 css-45352"
+  >
+    hello world
+  </h3>
+  <h2
+    className="css-prwino42 css-prwino41 css-45352"
+  >
+    hello world
+  </h2>
+</section>
 `;

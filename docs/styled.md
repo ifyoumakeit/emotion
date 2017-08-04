@@ -66,3 +66,19 @@ const H2 = styled('h2')('some-other-class', {
 })
 
 ```
+
+### withComponent
+
+You can change a `styled` component's tag with the method `withComponent`. This API was inspired by[styled-components](https://github.com/styled-components/styled-components).
+
+```jsx
+import styled from 'emotion/react'
+
+const Heading = styled.h1`
+  font-size: 24px;
+  color: red;
+`
+
+const Subheading = Heading.withTag("h2")
+
+```
