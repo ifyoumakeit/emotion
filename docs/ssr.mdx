@@ -118,6 +118,8 @@ res
 ### On client
 
 ```jsx
+import createCache from '@emotion/cache'
+
 // Hydration of the ids in `data-emotion-css` will automatically occur when the cache is created
 const cache = createCache()
 ReactDOM.hydrate(
